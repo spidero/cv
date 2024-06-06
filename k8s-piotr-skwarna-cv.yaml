@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: piotr-skwarna-cv
+spec:
+  selector:
+    matchLabels:
+      app: cv
+  replicas: 4
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 3
+  template:
+    metadata:
+      labels:
+        app: cv
+    spec:
+      containers:
+        - name: cv
+          image: spideropl/cv
+          ports:
+            - name: cv
+              containerPort: 8080
+              protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: piotr-skwarna-cv-service
+spec:
+  selector:
+    app: cv
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+  type: ClusterIP
