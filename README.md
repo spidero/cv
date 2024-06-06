@@ -1,4 +1,4 @@
-# You wanna see my ~~lease~~cv?
+# Want To See My ~~Lease~~ CV?
 
 ## Docker
 > docker run  -dp 8080:8080 spideropl/cv
