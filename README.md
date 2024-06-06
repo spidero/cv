@@ -7,4 +7,4 @@
 > docker compose up -d 
 
 ## Kubernetes 
-> kubectl apply -f k8s-piotr-skwarna-cv.yaml 
+> kubectl apply -f [k8s-piotr-skwarna-cv.yaml ](https://raw.githubusercontent.com/spidero/cv/main/k8s-piotr-skwarna-cv.yaml)
