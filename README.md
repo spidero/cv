@@ -4,7 +4,7 @@
 > docker run  -dp 8080:8080 spideropl/cv
 
 ## Docker Compose
-> wget https://raw.githubusercontent.com/spidero/cv/main/docker-compose.yaml
+> wget https://raw.githubusercontent.com/spidero/cv/main/docker-compose.yaml;
 > docker compose up -d
  
 ## Kubernetes 
