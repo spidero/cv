@@ -18,11 +18,29 @@ spec:
     spec:
       containers:
         - name: cv
-          image: spideropl/cv
+          image: spideropl/cv:latest
+          imagePullPolicy: Always
           ports:
             - name: cv
               containerPort: 8080
               protocol: TCP
+          resources:
+            requests:
+              cpu: 10m
+              memory: 16Mi
+            limits:
+              cpu: 100m
+              memory: 32Mi
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 1000
+            runAsGroup: 1000
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop: ["ALL"]
+            seccompProfile:
+              type: RuntimeDefault
 ---
 apiVersion: v1
 kind: Service
