@@ -13,4 +13,4 @@
 ## Azure
 Live: https://azure.skwarna.eu/
 
-Every push to `master` in [spidero/homepage](https://github.com/spidero/homepage) is deployed automatically to Azure Static Web Apps by GitHub Actions ([workflow](https://github.com/spidero/homepage/blob/master/.github/workflows/azure-static-web-apps-ashy-bay-0b0d2f003.yml)). Pull requests get their own preview environment, which is removed when the PR is closed.
+The site is deployed automatically to Azure Static Web Apps by GitHub Actions on every push to the main branch. Pull requests get their own preview environment, which is removed when the PR is closed.
