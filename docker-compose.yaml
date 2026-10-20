@@ -1,8 +1,7 @@
 ---
-version: "2.1"
 services:
   piotr-skwarna:
-    image: "spideropl/cv"
+    image: "spideropl/cv:latest"
     ports:
       - 8080:8080
     
